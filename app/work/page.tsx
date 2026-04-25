@@ -147,11 +147,11 @@ function ProjectSection({
                     {/* Details */}
                     <div className="flex flex-col gap-8">
                         {/* Meta */}
-                        <div className="grid grid-cols-3 gap-4 text-center">
+                        <div className="grid grid-cols-3 gap-2 md:gap-4 text-center">
                             {[['Client', client], ['Year', year], ['Role', role]].map(([k, v]) => (
-                                <div key={k} className="bg-white rounded-2xl p-4 border border-gray-100">
+                                <div key={k} className="bg-white rounded-2xl p-3 md:p-4 border border-gray-100">
                                     <p className="text-[9px] font-semibold uppercase tracking-widest text-gray-400 mb-1">{k}</p>
-                                    <p className="text-[13px] font-semibold text-[#1a1a1a] leading-snug">{v}</p>
+                                    <p className="text-[11px] md:text-[13px] font-semibold text-[#1a1a1a] leading-snug">{v}</p>
                                 </div>
                             ))}
                         </div>
@@ -194,14 +194,15 @@ export default function WorkPage() {
             {/* Nav */}
             <nav className="fixed top-0 left-0 right-0 z-50 flex items-center justify-between px-6 md:px-12 py-4 bg-[#f8f9fa]/90 backdrop-blur-md border-b border-gray-100">
                 <Link href="/" className="flex items-center gap-2 text-[13px] font-medium text-gray-500 hover:text-black transition-colors">
-                    <ArrowLeft className="w-4 h-4" /> Back to Home
+                    <ArrowLeft className="w-4 h-4" />
+                    <span className="hidden sm:inline">Back to Home</span>
                 </Link>
                 <div className="flex items-center gap-3">
-                    <span className="font-semibold text-sm tracking-tight">Thawheed De Alwis</span>
+                    <span className="hidden md:inline font-semibold text-sm tracking-tight">Thawheed De Alwis</span>
                 </div>
                 <a
                     href="mailto:thouheedshereef@gmail.com"
-                    className="flex items-center gap-2 px-5 py-2.5 bg-black text-white rounded-full text-[13px] font-medium hover:bg-gray-800 active:scale-95 transition-all duration-200"
+                    className="flex items-center gap-2 px-4 py-2 md:px-5 md:py-2.5 bg-black text-white rounded-full text-[13px] font-medium hover:bg-gray-800 active:scale-95 transition-all duration-200"
                 >
                     Contact <ArrowUpRight className="w-3.5 h-3.5" />
                 </a>
@@ -244,11 +245,11 @@ export default function WorkPage() {
                             />
 
                             <div className="flex flex-col gap-8">
-                                <div className="grid grid-cols-3 gap-4 text-center">
+                                <div className="grid grid-cols-3 gap-2 md:gap-4 text-center">
                                     {[['Client', 'Ford'], ['Year', '2024'], ['Role', 'Motion Director']].map(([k, v]) => (
-                                        <div key={k} className="bg-white rounded-2xl p-4 border border-gray-100">
+                                        <div key={k} className="bg-white rounded-2xl p-3 md:p-4 border border-gray-100">
                                             <p className="text-[9px] font-semibold uppercase tracking-widest text-gray-400 mb-1">{k}</p>
-                                            <p className="text-[13px] font-semibold text-[#1a1a1a] leading-snug">{v}</p>
+                                            <p className="text-[11px] md:text-[13px] font-semibold text-[#1a1a1a] leading-snug">{v}</p>
                                         </div>
                                     ))}
                                 </div>
@@ -350,7 +351,7 @@ export default function WorkPage() {
                             <p className="text-[10px] font-semibold uppercase tracking-widest text-gray-400 mb-3">Let&apos;s work together</p>
                             <h2 className="text-3xl md:text-4xl font-semibold leading-tight">Have a project in mind?</h2>
                         </div>
-                        <div className="flex gap-3 shrink-0">
+                        <div className="flex flex-wrap gap-3">
                             <a
                                 href="mailto:thouheedshereef@gmail.com"
                                 className="inline-flex items-center gap-2 px-6 py-3 bg-black text-white rounded-full text-[13px] font-medium hover:bg-gray-800 transition-colors"
