@@ -201,7 +201,7 @@ function TypewriterTagline() {
   const text = useTypewriter(TYPEWRITER_PHRASES);
   return (
     <p className="text-lg md:text-xl font-medium text-gray-700 mt-4 max-w-md">
-      — I&apos;m Thawheed,{' '}
+      I&apos;m Thawheed,{' '}
       <span className="inline-block min-w-[2px]">
         {text}
         <span className="inline-block w-[2px] h-[1.1em] bg-gray-700 ml-[1px] align-middle animate-pulse" />
@@ -348,10 +348,7 @@ export default function Home() {
       {/* ── NAVIGATION ── */}
       <nav id="main-nav" className="fixed top-0 left-0 right-0 z-50 flex items-center justify-between px-6 md:px-12 py-4 w-full transition-all duration-300 bg-[#f8f9fa]/90 backdrop-blur-md border-b border-gray-100">
         <div className="flex items-center gap-3">
-          <div className="w-9 h-9 relative shrink-0 bg-white rounded-lg p-1 border border-gray-100 shadow-sm">
-            <Image src="/logo.png" alt="Thawheed De Alwis" fill className="object-contain p-0.5" />
-          </div>
-          <span className="font-semibold text-sm tracking-tight hidden sm:block">Thawheed De Alwis</span>
+          <span className="font-semibold text-sm tracking-tight">Thawheed De Alwis</span>
         </div>
         <div className="hidden md:flex items-center gap-7 text-[13px] font-medium text-gray-500">
           {['About Me', 'Experience', 'Toolkit', 'Portfolio', 'Contact'].map(link => (
@@ -431,10 +428,10 @@ export default function Home() {
               </p>
               <h2 className="text-3xl font-semibold mb-6 leading-tight">Crafting brands that<br />mean something.</h2>
               <p className="text-[13px] text-gray-500 leading-relaxed mb-4">
-                I&apos;m Thawheed De Alwis — a Creative Director and Graphic Designer with over a decade of experience turning brand challenges into visual solutions. From automotive showrooms in Sri Lanka to luxury cosmetics campaigns, I lead with strategy and finish with craft.
+                I&apos;m Thawheed De Alwis,a Creative Director and Graphic Designer with over a decade of experience turning brand challenges into visual solutions. From automotive showrooms in Sri Lanka to luxury cosmetics campaigns, I lead with strategy and finish with craft.
               </p>
               <p className="text-[13px] text-gray-500 leading-relaxed mb-4">
-                My foundation in multimedia and advanced graphic design has evolved into a leadership role where I drive integrated marketing strategies, oversee creative direction, and manage cross-functional teams — currently at Tavisgo Motors.
+                My foundation in multimedia and advanced graphic design has evolved into a leadership role where I drive integrated marketing strategies, oversee creative direction, and manage cross-functional teams,currently at Tavisgo Motors.
               </p>
               <p className="text-[13px] text-gray-500 leading-relaxed">
                 I&apos;m also currently pursuing an MBA at London Metropolitan University (UK) / Esoft, deepening my understanding of the business side of creativity.
@@ -464,7 +461,7 @@ export default function Home() {
               <div className="space-y-5">
                 {[
                   'Over 10 years spanning graphic design, brand identity, digital campaigns, and creative direction across Sri Lanka and Saudi Arabia.',
-                  'Led end-to-end creative projects — from regulatory-compliant packaging to multi-channel digital campaigns for 50+ brand clients.',
+                  'Led end-to-end creative projects, from regulatory-compliant packaging to multi-channel digital campaigns for 50+ brand clients.',
                   'Currently pursuing an MBA to fuse creative leadership with strategic business acumen.',
                 ].map((point, i) => (
                   <div key={i} className="flex gap-3 items-start">
@@ -477,79 +474,6 @@ export default function Home() {
               </div>
             </Reveal>
 
-          </div>
-        </section>
-
-        {/* ── EXPERIENCE ── */}
-        <section id="experience" className="py-28 px-6 md:px-12 bg-[#f8f9fa] border-t border-gray-100">
-          <div className="max-w-6xl mx-auto">
-            <Reveal>
-              <div className="flex flex-col md:flex-row items-baseline justify-between mb-14 gap-8">
-                <div>
-                  <p className="text-[10px] font-semibold uppercase tracking-widest text-gray-400 mb-4 flex items-center gap-2">
-                    <span className="w-1.5 h-1.5 rounded-full bg-gray-400 inline-block"></span> Work History
-                  </p>
-                  <h2 className="text-4xl font-semibold leading-tight">Explore My Design<br />Journey</h2>
-                </div>
-                <div className="max-w-sm">
-                  <p className="text-[13px] text-gray-500 leading-relaxed mb-4">
-                    Over a decade of crafting visual identities, leading creative teams, and delivering work that moves people — across Sri Lanka and internationally.
-                  </p>
-                  <a href="#contact" className="inline-flex items-center gap-1 text-[12px] font-semibold text-black border-b border-black pb-0.5 hover-underline">
-                    Work Together <ArrowUpRight className="w-3 h-3" />
-                  </a>
-                </div>
-              </div>
-            </Reveal>
-
-            <div className="flex flex-col gap-4">
-              <TimelineRow
-                company="Tavisgo Motors (Pvt) Ltd"
-                location="Sri Lanka"
-                period="2024 — Present"
-                role="Creative Director"
-                description="Developing integrated marketing strategies, leading brand campaigns, overseeing digital and print creative across all touchpoints."
-                tags={['Brand Strategy', 'Art Direction']}
-                featured
-                delay={100}
-              />
-              <TimelineRow
-                company="British Cosmetics (Pvt) Ltd"
-                location="Sri Lanka"
-                period="2020 — 2024"
-                role="Creative Director"
-                description="Oversaw all visual output — packaging design, compliance labelling, digital campaigns, web banners, and photo production for 50+ SKUs."
-                tags={['Packaging Design', 'Digital Campaigns']}
-                delay={150}
-              />
-              <TimelineRow
-                company="Boost Metrics"
-                location="Sri Lanka"
-                period="2019 — 2022"
-                role="Creative Designer"
-                description="Delivered print and digital collateral, brand identities, web assets, and motion graphics for a diverse range of marketing clients."
-                tags={['Brand Identity', 'Motion Graphics']}
-                delay={200}
-              />
-              <TimelineRow
-                company="Matjar Alwatany Trading Company"
-                location="Saudi Arabia"
-                period="2015 — 2018"
-                role="Graphic Designer"
-                description="Produced sales campaign visuals, in-store signage, vendor brand videos for big-screen display, and photo editing across retail touchpoints."
-                tags={['Print Design', 'Retail Branding']}
-                delay={250}
-              />
-              <TimelineRow
-                company="Tavisgo Motors (Pvt) Ltd"
-                location="Sri Lanka"
-                period="2014 — 2015"
-                role="Creative Designer"
-                description="Designed motion graphics, edited photography, and developed visual assets for automotive marketing materials."
-                tags={['Photography', 'Motion Graphics']}
-                delay={300}
-              />
-            </div>
           </div>
         </section>
 
@@ -599,6 +523,79 @@ export default function Home() {
               </div>
             </div>
           </Reveal>
+        </section>
+
+        {/* ── EXPERIENCE ── */}
+        <section id="experience" className="py-28 px-6 md:px-12 bg-[#f8f9fa] border-t border-gray-100">
+          <div className="max-w-6xl mx-auto">
+            <Reveal>
+              <div className="flex flex-col md:flex-row items-baseline justify-between mb-14 gap-8">
+                <div>
+                  <p className="text-[10px] font-semibold uppercase tracking-widest text-gray-400 mb-4 flex items-center gap-2">
+                    <span className="w-1.5 h-1.5 rounded-full bg-gray-400 inline-block"></span> Work History
+                  </p>
+                  <h2 className="text-4xl font-semibold leading-tight">Explore My Design<br />Journey</h2>
+                </div>
+                <div className="max-w-sm">
+                  <p className="text-[13px] text-gray-500 leading-relaxed mb-4">
+                    Over a decade of crafting visual identities, leading creative teams, and delivering work that moves people across Sri Lanka and internationally.
+                  </p>
+                  <a href="#contact" className="inline-flex items-center gap-1 text-[12px] font-semibold text-black border-b border-black pb-0.5 hover-underline">
+                    Work Together <ArrowUpRight className="w-3 h-3" />
+                  </a>
+                </div>
+              </div>
+            </Reveal>
+
+            <div className="flex flex-col gap-4">
+              <TimelineRow
+                company="Tavisgo Motors (Pvt) Ltd"
+                location="Sri Lanka"
+                period="2024 — Present"
+                role="Creative Director"
+                description="Developing integrated marketing strategies, leading brand campaigns, overseeing digital and print creative across all touchpoints."
+                tags={['Brand Strategy', 'Art Direction']}
+                featured
+                delay={100}
+              />
+              <TimelineRow
+                company="British Cosmetics (Pvt) Ltd"
+                location="Sri Lanka"
+                period="2020 — 2024"
+                role="Creative Director"
+                description="Oversaw all visual output. Packaging design, compliance labelling, digital campaigns, web banners, and photo production for 50+ SKUs."
+                tags={['Packaging Design', 'Digital Campaigns']}
+                delay={150}
+              />
+              <TimelineRow
+                company="Boost Metrics"
+                location="Sri Lanka"
+                period="2019 — 2022"
+                role="Creative Designer"
+                description="Delivered print and digital collateral, brand identities, web assets, and motion graphics for a diverse range of marketing clients."
+                tags={['Brand Identity', 'Motion Graphics']}
+                delay={200}
+              />
+              <TimelineRow
+                company="Matjar Alwatany Trading Company"
+                location="Saudi Arabia"
+                period="2015 — 2018"
+                role="Graphic Designer"
+                description="Produced sales campaign visuals, in-store signage, vendor brand videos for big-screen display, and photo editing across retail touchpoints."
+                tags={['Print Design', 'Retail Branding']}
+                delay={250}
+              />
+              <TimelineRow
+                company="Tavisgo Motors (Pvt) Ltd"
+                location="Sri Lanka"
+                period="2014 — 2015"
+                role="Creative Designer"
+                description="Designed motion graphics, edited photography, and developed visual assets for automotive marketing materials."
+                tags={['Photography', 'Motion Graphics']}
+                delay={300}
+              />
+            </div>
+          </div>
         </section>
 
         {/* ── PORTFOLIO ── */}
@@ -675,7 +672,7 @@ export default function Home() {
               Got a Vision?<br />Let&apos;s Bring It to Life!
             </h2>
             <p className="text-gray-400 max-w-lg text-[13px] leading-relaxed mb-10">
-              Whether you need a complete brand identity, a packaging system, a digital campaign, or strategic creative direction — I&apos;m here to make it happen. Let&apos;s talk.
+              Whether you need a complete brand identity, a packaging system, a digital campaign, or strategic creative direction. I&apos;m here to make it happen. Let&apos;s talk.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 items-center">
               <a href="mailto:thouheedshereef@gmail.com"
@@ -699,9 +696,6 @@ export default function Home() {
           {/* Brand */}
           <div className="flex flex-col gap-3">
             <div className="flex items-center gap-2">
-              <div className="w-7 h-7 relative shrink-0">
-                <Image src="/logo.png" alt="Logo" fill className="object-contain brightness-200" />
-              </div>
               <span className="text-white text-sm font-semibold">Thawheed De Alwis</span>
             </div>
             <p className="text-[11px] max-w-[220px] leading-relaxed">Creative Director &amp; Graphic Designer<br />Colombo, Sri Lanka</p>
