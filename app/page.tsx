@@ -453,23 +453,23 @@ export default function Home() {
                 <div className="absolute inset-x-0 bottom-0 h-24 bg-gradient-to-t from-[#f8f9fa] to-transparent pointer-events-none" />
               </div>
 
-              {/* Social links */}
-              <div className="flex items-center gap-4 animate-fade-up delay-400 mt-6">
-                <a
-                  href="https://www.behance.net/thouheeddealwis"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 text-[11px] font-semibold uppercase tracking-widest text-gray-500 border border-gray-200 rounded-full px-4 py-2 hover:border-gray-900 hover:text-gray-900 transition-all duration-200"
-                >
-                  <svg className="w-3.5 h-3.5" viewBox="0 0 24 24" fill="currentColor"><path d="M22 7h-7V5h7v2zm1.726 10c-.442 1.297-2.029 3-5.101 3-3.074 0-5.051-1.598-5.051-5.355 0-3.590 1.925-5.744 5.051-5.744 3.074 0 4.814 1.867 5.101 4.996.047.437.069.885.069 1.353H15.5c.13 2.002 1.182 2.418 2.368 2.418 1.187 0 1.817-.694 2.063-1.667h3.795zm-7.44-3.667h3.569c-.051-1.453-.9-2.22-1.784-2.22-.929 0-1.645.748-1.785 2.22zM9.5 12.4c0 1.97-1.066 3.21-2.79 3.21-1.12 0-1.893-.453-2.21-1.193V15.5H1V5h3.5v3.827c.317-.693 1.007-1.127 2.21-1.127C8.434 7.7 9.5 8.957 9.5 12.4zm-3.414 0c0-1.518-.513-2.4-1.42-2.4-.907 0-1.416.882-1.416 2.4 0 1.516.51 2.4 1.416 2.4.907 0 1.42-.884 1.42-2.4z" /></svg>
-                  Behance Portfolio
-                </a>
-              </div>
-
-              {/* Scroll hint */}
-              <div className="flex items-center gap-3 animate-fade-up delay-600">
-                <div className="w-10 h-px bg-gray-400"></div>
-                <p className="text-[10px] font-semibold uppercase tracking-widest text-gray-400">Scroll down</p>
+              {/* Social links + scroll hint */}
+              <div className="flex flex-col gap-4 animate-fade-up delay-400 mt-6">
+                <div className="flex items-center gap-4">
+                  <a
+                    href="https://www.behance.net/thouheeddealwis"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-2 text-[11px] font-semibold uppercase tracking-widest text-gray-500 border border-gray-200 rounded-full px-4 py-2 hover:border-gray-900 hover:text-gray-900 transition-all duration-200"
+                  >
+                    <svg className="w-3.5 h-3.5" viewBox="0 0 24 24" fill="currentColor"><path d="M22 7h-7V5h7v2zm1.726 10c-.442 1.297-2.029 3-5.101 3-3.074 0-5.051-1.598-5.051-5.355 0-3.590 1.925-5.744 5.051-5.744 3.074 0 4.814 1.867 5.101 4.996.047.437.069.885.069 1.353H15.5c.13 2.002 1.182 2.418 2.368 2.418 1.187 0 1.817-.694 2.063-1.667h3.795zm-7.44-3.667h3.569c-.051-1.453-.9-2.22-1.784-2.22-.929 0-1.645.748-1.785 2.22zM9.5 12.4c0 1.97-1.066 3.21-2.79 3.21-1.12 0-1.893-.453-2.21-1.193V15.5H1V5h3.5v3.827c.317-.693 1.007-1.127 2.21-1.127C8.434 7.7 9.5 8.957 9.5 12.4zm-3.414 0c0-1.518-.513-2.4-1.42-2.4-.907 0-1.416.882-1.416 2.4 0 1.516.51 2.4 1.416 2.4.907 0 1.42-.884 1.42-2.4z" /></svg>
+                    Behance Portfolio
+                  </a>
+                </div>
+                <div className="flex items-center gap-3">
+                  <div className="w-10 h-px bg-gray-400"></div>
+                  <p className="text-[10px] font-semibold uppercase tracking-widest text-gray-400">Scroll down</p>
+                </div>
               </div>
             </div>
 
