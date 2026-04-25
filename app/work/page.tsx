@@ -197,10 +197,7 @@ export default function WorkPage() {
                     <ArrowLeft className="w-4 h-4" /> Back to Home
                 </Link>
                 <div className="flex items-center gap-3">
-                    <div className="w-9 h-9 relative shrink-0 bg-white rounded-lg p-1 border border-gray-100 shadow-sm">
-                        <Image src="/logo.png" alt="Thawheed De Alwis" fill className="object-contain p-0.5" />
-                    </div>
-                    <span className="font-semibold text-sm tracking-tight hidden sm:block">Thawheed De Alwis</span>
+                    <span className="font-semibold text-sm tracking-tight">Thawheed De Alwis</span>
                 </div>
                 <a
                     href="mailto:thouheedshereef@gmail.com"
