@@ -186,6 +186,94 @@ function ProjectSection({
     );
 }
 
+/* ─── Video section (reusable, modern full-bleed layout) ─────────── */
+function VideoSection({
+    index, label, title, year, client, role, overview, deliverables, tags, video,
+}: {
+    index: number; label: string; title: string; year: string;
+    client: string; role: string; overview: string;
+    deliverables: string[]; tags: string[]; video: string;
+}) {
+    const vidRef = useRef<HTMLVideoElement>(null);
+    return (
+        <Reveal>
+            <div className="border-t border-gray-100 pt-16 pb-16">
+                {/* Full-width video hero */}
+                <div
+                    className="group relative w-full aspect-video rounded-3xl overflow-hidden cursor-pointer bg-black"
+                    onMouseEnter={() => vidRef.current?.play()}
+                    onMouseLeave={() => { if (vidRef.current) { vidRef.current.pause(); vidRef.current.currentTime = 0; } }}
+                >
+                    <video
+                        ref={vidRef}
+                        src={video}
+                        muted
+                        playsInline
+                        loop
+                        className="absolute inset-0 w-full h-full object-cover opacity-90 transition-all duration-700 group-hover:scale-105 group-hover:opacity-100"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/10 to-transparent" />
+                    {/* Top-left badge */}
+                    <div className="absolute top-5 left-5 flex items-center gap-2">
+                        <span className="inline-flex items-center gap-1.5 text-[9px] font-bold uppercase tracking-widest bg-white/10 backdrop-blur-sm text-white/80 border border-white/15 px-3 py-1.5 rounded-full">
+                            <span className="w-1.5 h-1.5 rounded-full bg-red-400 animate-pulse" /> Motion
+                        </span>
+                    </div>
+                    {/* Index top-right */}
+                    <span className="absolute top-5 right-5 text-white/25 text-[11px] font-semibold tabular-nums">
+                        {String(index).padStart(2, '0')}
+                    </span>
+                    {/* Play circle */}
+                    <div className="absolute inset-0 flex items-center justify-center opacity-80 group-hover:opacity-0 transition-opacity duration-300 pointer-events-none">
+                        <div className="w-20 h-20 rounded-full bg-white/10 backdrop-blur-sm border border-white/20 flex items-center justify-center">
+                            <svg viewBox="0 0 24 24" className="w-9 h-9 fill-white ml-1"><path d="M8 5v14l11-7z" /></svg>
+                        </div>
+                    </div>
+                    {/* Bottom overlay — label + title */}
+                    <div className="absolute bottom-0 left-0 right-0 px-7 py-6">
+                        <p className="text-white/50 text-[10px] font-semibold uppercase tracking-widest mb-1">{label}</p>
+                        <h2 className="text-white text-2xl md:text-3xl font-semibold leading-tight">{title}</h2>
+                    </div>
+                </div>
+
+                {/* Details row */}
+                <div className="mt-8 grid grid-cols-1 md:grid-cols-[200px_1fr] gap-8 items-start">
+                    {/* Meta column */}
+                    <div className="flex flex-row md:flex-col gap-2">
+                        {[['Client', client], ['Year', year], ['Role', role]].map(([k, v]) => (
+                            <div key={k} className="flex-1 md:flex-none bg-white border border-gray-100 rounded-2xl px-4 py-3">
+                                <p className="text-[9px] font-semibold uppercase tracking-widest text-gray-400 mb-1">{k}</p>
+                                <p className="text-[12px] font-semibold text-[#1a1a1a] leading-snug">{v}</p>
+                            </div>
+                        ))}
+                    </div>
+
+                    {/* Text + deliverables + tags */}
+                    <div className="flex flex-col gap-6">
+                        <div>
+                            <p className="text-[10px] font-semibold uppercase tracking-widest text-gray-400 mb-2">Overview</p>
+                            <p className="text-[14px] text-gray-600 leading-relaxed">{overview}</p>
+                        </div>
+                        <div>
+                            <p className="text-[10px] font-semibold uppercase tracking-widest text-gray-400 mb-3">Deliverables</p>
+                            <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-8 gap-y-2">
+                                {deliverables.map(d => (
+                                    <div key={d} className="flex items-start gap-2 text-[13px] text-gray-600">
+                                        <span className="mt-1.5 w-1 h-1 rounded-full bg-gray-300 shrink-0" />{d}
+                                    </div>
+                                ))}
+                            </div>
+                        </div>
+                        <div className="flex flex-wrap gap-2">
+                            {tags.map(t => <Tag key={t} label={t} />)}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </Reveal>
+    );
+}
+
 /* ─── Page ───────────────────────────────────────────────────────── */
 export default function WorkPage() {
     return (
@@ -198,7 +286,7 @@ export default function WorkPage() {
                     <span className="hidden sm:inline">Back to Home</span>
                 </Link>
                 <div className="flex items-center gap-3">
-                    <span className="hidden md:inline font-semibold text-sm tracking-tight">Thawheed De Alwis</span>
+                    <Image src="/logo.png" alt="Thawheed De Alwis" width={96} height={34} className="h-8 w-auto object-contain hidden md:block" />
                 </div>
                 <a
                     href="mailto:thouheedshereef@gmail.com"
@@ -221,69 +309,29 @@ export default function WorkPage() {
                             <span className="font-semibold">Projects</span>
                         </h1>
                         <p className="text-gray-500 text-base max-w-xl leading-relaxed">
-                            A curated collection of brand, packaging, editorial and motion projects — built across a decade of creative direction and design.
+                            Six projects spanning motion graphics, brand identity, packaging, and editorial design — built across a decade of creative direction.
                         </p>
                     </div>
                 </Reveal>
 
-                {/* ── Featured: Ford Bronco video ── */}
-                <Reveal>
-                    <div className="mb-16 border-t border-gray-100 pt-16">
-                        <div className="flex items-start gap-4 mb-10">
-                            <span className="text-[11px] font-semibold text-gray-300 tabular-nums mt-0.5">01</span>
-                            <div>
-                                <p className="text-[10px] font-semibold uppercase tracking-widest text-gray-400 mb-2">Commercial Video — Tavisgo Motors</p>
-                                <h2 className="text-3xl md:text-4xl font-semibold leading-tight">Ford Bronco – Outer Banks Commercial</h2>
-                            </div>
-                        </div>
-
-                        <div className="grid grid-cols-1 lg:grid-cols-[1fr_380px] gap-12 items-start">
-                            <VideoHero
-                                video="/Ford_Outer_Banks_Commercial.mp4"
-                                label="Commercial Video — Tavisgo Motors"
-                                title="Ford Bronco – Outer Banks Commercial"
-                            />
-
-                            <div className="flex flex-col gap-8">
-                                <div className="grid grid-cols-3 gap-2 md:gap-4 text-center">
-                                    {[['Client', 'Ford'], ['Year', '2024'], ['Role', 'Motion Director']].map(([k, v]) => (
-                                        <div key={k} className="bg-white rounded-2xl p-3 md:p-4 border border-gray-100">
-                                            <p className="text-[9px] font-semibold uppercase tracking-widest text-gray-400 mb-1">{k}</p>
-                                            <p className="text-[11px] md:text-[13px] font-semibold text-[#1a1a1a] leading-snug">{v}</p>
-                                        </div>
-                                    ))}
-                                </div>
-
-                                <div>
-                                    <p className="text-[10px] font-semibold uppercase tracking-widest text-gray-400 mb-3">Overview</p>
-                                    <p className="text-[14px] text-gray-600 leading-relaxed">
-                                        A high-impact cinematic commercial conceived for large-format display. The narrative follows a journey from urban confinement to untamed wilderness — visually representing freedom, power, and self-discovery. Every frame was crafted to amplify the Ford Bronco's Outer Banks identity.
-                                    </p>
-                                </div>
-
-                                <div>
-                                    <p className="text-[10px] font-semibold uppercase tracking-widest text-gray-400 mb-3">Deliverables</p>
-                                    <ul className="flex flex-col gap-2">
-                                        {[
-                                            'Full-length 60s cinematic commercial',
-                                            'Motion graphics & title cards',
-                                            '15s & 30s social edits',
-                                            'Color grading & sound design supervision',
-                                        ].map(d => (
-                                            <li key={d} className="flex items-start gap-2 text-[13px] text-gray-600">
-                                                <span className="mt-1.5 w-1 h-1 rounded-full bg-gray-300 shrink-0" />{d}
-                                            </li>
-                                        ))}
-                                    </ul>
-                                </div>
-
-                                <div className="flex flex-wrap gap-2">
-                                    {['After Effects', 'Premiere Pro', 'Motion Design', 'Cinematic', 'Color Grading'].map(t => <Tag key={t} label={t} />)}
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </Reveal>
+                {/* ── 01 Ford Bronco ── */}
+                <VideoSection
+                    index={1}
+                    label="Commercial Video — Tavisgo Motors"
+                    title="Ford Bronco – Outer Banks Commercial"
+                    year="2024"
+                    client="Ford"
+                    role="Motion Director"
+                    overview="A high-impact cinematic commercial conceived for large-format display. The narrative follows a journey from urban confinement to untamed wilderness — visually representing freedom, power, and self-discovery. Every frame was crafted to amplify the Ford Bronco's Outer Banks identity."
+                    deliverables={[
+                        'Full-length 60s cinematic commercial',
+                        'Motion graphics & title cards',
+                        '15s & 30s social edits',
+                        'Color grading & sound design supervision',
+                    ]}
+                    tags={['After Effects', 'Premiere Pro', 'Motion Design', 'Cinematic', 'Color Grading']}
+                    video="/Ford_Outer_Banks_Commercial.mp4"
+                />
 
                 {/* ── Prevense Facewash ── */}
                 <ProjectSection
@@ -342,6 +390,44 @@ export default function WorkPage() {
                     ]}
                     tags={['Publication Design', 'Template', 'Editorial', 'InDesign', 'Typography']}
                     images={['/UN-1.jpg', '/UN-2.jpg', '/UN-3.jpg']}
+                />
+
+                {/* ── 05 DR3 Free Shipping ── */}
+                <VideoSection
+                    index={5}
+                    label="Motion Ad Concept — DR3"
+                    title="DR3 Free Shipping Campaign"
+                    year="2025"
+                    client="DR3"
+                    role="Motion Director"
+                    overview="The DR3 Free Shipping Campaign transforms a simple offer into a high-impact visual experience driven by motion and energy. The concept visualizes 'free shipping' as movement without limits — fast, fluid, and frictionless. Packages, arrows, and abstract lines are stylized into sleek, aerodynamic forms that flow across the frame, symbolizing seamless delivery."
+                    deliverables={[
+                        'Full motion ad (15s & 30s cuts)',
+                        'Kinetic typography animation',
+                        'Social media & digital platform edits',
+                        'Neon lighting & particle effects',
+                    ]}
+                    tags={['Motion Design', 'After Effects', 'Kinetic Typography', 'Ad Campaign', 'Glitch']}
+                    video="/freeshipping.mp4"
+                />
+
+                {/* ── 06 DR3 Performance Sneaker ── */}
+                <VideoSection
+                    index={6}
+                    label="Product Design & Motion — DR3"
+                    title="DR3 Performance Sneaker"
+                    year="2025"
+                    client="DR3"
+                    role="Creative Director"
+                    overview="The DR3 Performance Sneaker sits at the intersection of aesthetic minimalism and kinetic energy — every design element reflects movement, speed, and urban identity. The silhouette is sculpted with a forward-leaning stance, visually communicating acceleration even at rest. Motion graphics translate the shoe's velocity lines and glitch transitions into a powerful digital narrative."
+                    deliverables={[
+                        'Sneaker design concept & colorways',
+                        '3D motion render & animation',
+                        'Brand campaign visual identity',
+                        'Social media motion content',
+                    ]}
+                    tags={['Product Design', 'Motion Graphics', 'Brand Identity', '3D Render', 'Urban']}
+                    video="/sneaker.mp4"
                 />
 
                 {/* ── CTA ── */}
