@@ -361,7 +361,7 @@ function MobileDrawer() {
   if (!open) return null;
   return (
     <div className="md:hidden border-t border-gray-100 bg-[#f8f9fa]/95 backdrop-blur-md px-6 py-6 flex flex-col gap-4">
-      {['About Me', 'Experience', 'Toolkit', 'Portfolio', 'Contact'].map(link => (
+      {['About Me', 'Experience', 'Toolkit', 'Portfolio', 'Blogs', 'Contact'].map(link => (
         <a
           key={link}
           href={`#${link.toLowerCase().replace(' ', '-')}`}
@@ -399,11 +399,11 @@ export default function Home() {
         <nav id="main-nav" className="fixed top-0 left-0 right-0 z-50 w-full transition-all duration-300 bg-[#f8f9fa]/90 backdrop-blur-md border-b border-gray-100">
           <div className="flex items-center justify-between px-6 md:px-12 py-4">
             <div className="flex items-center gap-3">
-              <span className="font-semibold text-sm tracking-tight">Thawheed De Alwis</span>
+              <Image src="/logo.png" alt="Thawheed De Alwis logo" width={96} height={34} className="h-8 w-auto object-contain" priority />
             </div>
             {/* Desktop nav links */}
             <div className="hidden md:flex items-center gap-7 text-[13px] font-medium text-gray-500">
-              {['About Me', 'Experience', 'Toolkit', 'Portfolio', 'Contact'].map(link => (
+              {['About Me', 'Experience', 'Toolkit', 'Portfolio', 'Blogs', 'Contact'].map(link => (
                 <a key={link} href={`#${link.toLowerCase().replace(' ', '-')}`}
                   className="hover-underline hover:text-black transition-colors duration-200">{link}</a>
               ))}
@@ -447,7 +447,7 @@ export default function Home() {
                   alt="Thawheed De Alwis"
                   fill
                   sizes="100vw"
-                  className="object-cover object-top grayscale"
+                  className="object-cover object-top"
                   priority
                 />
                 <div className="absolute inset-x-0 bottom-0 h-24 bg-gradient-to-t from-[#f8f9fa] to-transparent pointer-events-none" />
@@ -480,7 +480,7 @@ export default function Home() {
                 alt="Thawheed De Alwis — Creative Director"
                 fill
                 sizes="46vw"
-                className="object-cover object-top grayscale"
+                className="object-cover object-top"
                 priority
               />
               {/* Fade gradient on left edge so image blends into page bg */}
@@ -519,15 +519,15 @@ export default function Home() {
                   <p className="text-6xl font-light mt-3 mb-2 tabular-nums">120%</p>
                   <p className="text-[11px] text-gray-400 max-w-[160px] mx-auto leading-relaxed">Average increase in brand engagement across client campaigns.</p>
                 </div>
-                <div className="h-64 rounded-2xl overflow-hidden relative">
-                  <Image src="/profile-picture.png" alt="At work" fill sizes="(max-width: 768px) 100vw, 33vw" className="object-cover object-top grayscale" />
+                <div className="w-full aspect-[3/4] rounded-2xl overflow-hidden relative bg-gray-100">
+                  <Image src="/profile-picture-3.png" alt="At work" fill sizes="(max-width: 768px) 100vw, 33vw" className="object-cover" />
                 </div>
               </Reveal>
 
               {/* Column 3 — highlights */}
               <Reveal delay={300} className="md:col-span-1 flex flex-col gap-8">
                 <div className="w-full h-56 rounded-2xl overflow-hidden relative">
-                  <Image src="/profile-picture-2.jpg" alt="Thawheed De Alwis" fill sizes="(max-width: 768px) 100vw, 33vw" className="object-cover object-center grayscale" />
+                  <Image src="/profile-picture-4.png" alt="Thawheed De Alwis" fill sizes="(max-width: 768px) 100vw, 33vw" className="object-cover" />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent" />
                 </div>
                 <div className="space-y-5">
@@ -731,6 +731,67 @@ export default function Home() {
             </div>
           </section>
 
+          {/* ── BLOGS ── */}
+          <section id="blogs" className="py-24 px-6 md:px-12 bg-white border-t border-gray-100">
+            <div className="max-w-6xl mx-auto">
+              <Reveal>
+                <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-6 mb-12">
+                  <div>
+                    <p className="text-[10px] font-semibold uppercase tracking-widest text-gray-400 mb-4 flex items-center gap-2">
+                      <span className="w-1.5 h-1.5 rounded-full bg-gray-400 inline-block"></span> Insights
+                    </p>
+                    <h2 className="text-4xl font-semibold leading-tight">Latest Blog Posts</h2>
+                  </div>
+                  <p className="text-[13px] text-gray-500 max-w-md leading-relaxed">
+                    Thoughts on leadership, learning, and people strategy from real projects and community engagement.
+                  </p>
+                </div>
+              </Reveal>
+
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <Reveal delay={100}>
+                  <article className="group bg-[#f8f9fa] border border-gray-100 rounded-3xl overflow-hidden hover:shadow-lg transition-all duration-300">
+                    <a href="https://thawheed-de-alwis.blogspot.com/2025/08/hr-recruitment-topics-subcategories.html" target="_blank" rel="noopener noreferrer" className="block">
+                      <div className="relative w-full aspect-[16/10] overflow-hidden">
+                        <Image src="/blog-1.jpg" alt="HR Recruitment Topics & Subcategories" fill sizes="(max-width: 768px) 100vw, 50vw" className="object-cover transition-transform duration-700 group-hover:scale-105" />
+                      </div>
+                      <div className="p-6">
+                        <p className="text-[10px] font-semibold uppercase tracking-widest text-gray-400 mb-3">August 01, 2025</p>
+                        <h3 className="text-2xl font-semibold leading-tight text-[#1a1a1a] mb-3">HR Recruitment Topics &amp; Subcategories</h3>
+                        <p className="text-[13px] text-gray-600 leading-relaxed mb-5">
+                          A structured guide to modern recruitment: workforce planning, sourcing, selection, employer branding, DEI, and hiring KPIs.
+                        </p>
+                        <span className="inline-flex items-center gap-2 text-[12px] font-semibold text-black border-b border-black pb-0.5">
+                          Read Article <ArrowUpRight className="w-3.5 h-3.5" />
+                        </span>
+                      </div>
+                    </a>
+                  </article>
+                </Reveal>
+
+                <Reveal delay={200}>
+                  <article className="group bg-[#f8f9fa] border border-gray-100 rounded-3xl overflow-hidden hover:shadow-lg transition-all duration-300">
+                    <a href="https://thawheed-de-alwis.blogspot.com/2026/04/creating-impact-beyond-classrooms.html" target="_blank" rel="noopener noreferrer" className="block">
+                      <div className="relative w-full aspect-[16/10] overflow-hidden">
+                        <Image src="/blog-2.jpeg" alt="Creating Impact Beyond Classrooms: Exploring Local Careers & Role Models" fill sizes="(max-width: 768px) 100vw, 50vw" className="object-cover transition-transform duration-700 group-hover:scale-105" />
+                      </div>
+                      <div className="p-6">
+                        <p className="text-[10px] font-semibold uppercase tracking-widest text-gray-400 mb-3">April 25, 2026</p>
+                        <h3 className="text-2xl font-semibold leading-tight text-[#1a1a1a] mb-3">Creating Impact Beyond Classrooms</h3>
+                        <p className="text-[13px] text-gray-600 leading-relaxed mb-5">
+                          Reflections from a community workshop at Soysa College focused on local careers, role models, and practical pathways for students.
+                        </p>
+                        <span className="inline-flex items-center gap-2 text-[12px] font-semibold text-black border-b border-black pb-0.5">
+                          Read Article <ArrowUpRight className="w-3.5 h-3.5" />
+                        </span>
+                      </div>
+                    </a>
+                  </article>
+                </Reveal>
+              </div>
+            </div>
+          </section>
+
           {/* ── CTA ── */}
           <section id="contact" className="mx-4 md:mx-10 my-12 bg-[#1a1a1a] text-white rounded-3xl py-24 px-8 relative overflow-hidden">
             {/* Decorative rings */}
@@ -775,7 +836,7 @@ export default function Home() {
 
             {/* Nav links */}
             <nav className="flex flex-wrap gap-x-7 gap-y-2 text-[12px]">
-              {['About Me', 'Experience', 'Toolkit', 'Portfolio', 'Contact'].map(link => (
+              {['About Me', 'Experience', 'Toolkit', 'Portfolio', 'Blogs', 'Contact'].map(link => (
                 <a key={link} href={`#${link.toLowerCase().replace(' ', '-')}`}
                   className="hover:text-white transition-colors duration-200">{link}</a>
               ))}
