@@ -373,8 +373,11 @@ function MobileDrawer() {
         <a href="mailto:thouheedshereef@gmail.com" className="inline-flex items-center gap-2 text-[13px] font-semibold text-[#1a1a1a]">
           <Mail className="w-4 h-4" /> thouheedshereef@gmail.com
         </a>
+        <a href="https://www.linkedin.com/in/thawheed-de-alwis" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 text-[13px] font-semibold text-[#1a1a1a]">
+          <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" /></svg> LinkedIn
+        </a>
         <a href="https://www.behance.net/thouheeddealwis" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 text-[13px] font-semibold text-[#1a1a1a]">
-          <svg className="w-4 h-4" viewBox="0 0 24 24" fill="currentColor"><path d="M22 7h-7V5h7v2zm1.726 10c-.442 1.297-2.029 3-5.101 3-3.074 0-5.051-1.598-5.051-5.355 0-3.590 1.925-5.744 5.051-5.744 3.074 0 4.814 1.867 5.101 4.996.047.437.069.885.069 1.353H15.5c.13 2.002 1.182 2.418 2.368 2.418 1.187 0 1.817-.694 2.063-1.667h3.795zm-7.44-3.667h3.569c-.051-1.453-.9-2.22-1.784-2.22-.929 0-1.645.748-1.785 2.22zM9.5 12.4c0 1.97-1.066 3.21-2.79 3.21-1.12 0-1.893-.453-2.21-1.193V15.5H1V5h3.5v3.827c.317-.693 1.007-1.127 2.21-1.127C8.434 7.7 9.5 8.957 9.5 12.4zm-3.414 0c0-1.518-.513-2.4-1.42-2.4-.907 0-1.416.882-1.416 2.4 0 1.516.51 2.4 1.416 2.4.907 0 1.42-.884 1.42-2.4z" /></svg> Behance Portfolio
+          <svg className="w-4 h-4" viewBox="0 0 24 24" fill="currentColor"><path d="M22 7h-7V5h7v2zm1.726 10c-.442 1.297-2.029 3-5.101 3-3.074 0-5.051-1.598-5.051-5.355 0-3.590 1.925-5.744 5.051-5.744 3.074 0 4.814 1.867 5.101 4.996.047.437.069.885.069 1.353H15.5c.13 2.002 1.182 2.418 2.368 2.418 1.187 0 1.817-.694 2.063-1.667h3.795zm-7.44-3.667h3.569c-.051-1.453-.9-2.22-1.784-2.22-.929 0-1.645.748-1.785 2.22zM9.5 12.4c0 1.97-1.066 3.21-2.79 3.21-1.12 0-1.893-.453-2.21-1.193V15.5H1V5h3.5v3.827c.317-.693 1.007-1.127 2.21-1.127C8.434 7.7 9.5 8.957 9.5 12.4zm-3.414 0c0-1.518-.513-2.4-1.42-2.4-.907 0-1.416.882-1.416 2.4 0 1.516.51 2.4 1.416 2.4.907 0 1.42-.884 1.42-2.4z" /></svg> Behance
         </a>
       </div>
     </div>
@@ -404,6 +407,19 @@ export default function Home() {
               ))}
             </div>
             <div className="flex items-center gap-3">
+              {/* Social icons — desktop only */}
+              <div className="hidden md:flex items-center gap-2">
+                <a href="https://www.linkedin.com/in/thawheed-de-alwis" target="_blank" rel="noopener noreferrer"
+                  aria-label="LinkedIn"
+                  className="w-8 h-8 flex items-center justify-center rounded-full border border-gray-200 text-gray-500 hover:border-gray-900 hover:text-gray-900 transition-all duration-200">
+                  <svg className="w-3.5 h-3.5" fill="currentColor" viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" /></svg>
+                </a>
+                <a href="https://www.behance.net/thouheeddealwis" target="_blank" rel="noopener noreferrer"
+                  aria-label="Behance"
+                  className="w-8 h-8 flex items-center justify-center rounded-full border border-gray-200 text-gray-500 hover:border-gray-900 hover:text-gray-900 transition-all duration-200">
+                  <svg className="w-3.5 h-3.5" fill="currentColor" viewBox="0 0 24 24"><path d="M22 7h-7V5h7v2zm1.726 10c-.442 1.297-2.029 3-5.101 3-3.074 0-5.051-1.598-5.051-5.355 0-3.590 1.925-5.744 5.051-5.744 3.074 0 4.814 1.867 5.101 4.996.047.437.069.885.069 1.353H15.5c.13 2.002 1.182 2.418 2.368 2.418 1.187 0 1.817-.694 2.063-1.667h3.795zm-7.44-3.667h3.569c-.051-1.453-.9-2.22-1.784-2.22-.929 0-1.645.748-1.785 2.22zM9.5 12.4c0 1.97-1.066 3.21-2.79 3.21-1.12 0-1.893-.453-2.21-1.193V15.5H1V5h3.5v3.827c.317-.693 1.007-1.127 2.21-1.127C8.434 7.7 9.5 8.957 9.5 12.4zm-3.414 0c0-1.518-.513-2.4-1.42-2.4-.907 0-1.416.882-1.416 2.4 0 1.516.51 2.4 1.416 2.4.907 0 1.42-.884 1.42-2.4z" /></svg>
+                </a>
+              </div>
               <a href="tel:+94779081798"
                 className="flex items-center gap-2 px-5 py-2.5 bg-black text-white rounded-full text-[13px] font-medium hover:bg-gray-800 active:scale-95 transition-all duration-200">
                 Book A Call <ArrowUpRight className="w-3.5 h-3.5" />
@@ -450,7 +466,16 @@ export default function Home() {
 
               {/* Social links + scroll hint */}
               <div className="flex flex-col gap-4 animate-fade-up delay-400 mt-6">
-                <div className="flex items-center gap-4">
+                <div className="flex items-center gap-3">
+                  <a
+                    href="https://www.linkedin.com/in/thawheed-de-alwis"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-2 text-[11px] font-semibold uppercase tracking-widest text-gray-500 border border-gray-200 rounded-full px-4 py-2 hover:border-gray-900 hover:text-gray-900 transition-all duration-200"
+                  >
+                    <svg className="w-3.5 h-3.5" fill="currentColor" viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" /></svg>
+                    LinkedIn
+                  </a>
                   <a
                     href="https://www.behance.net/thouheeddealwis"
                     target="_blank"
@@ -458,7 +483,7 @@ export default function Home() {
                     className="inline-flex items-center gap-2 text-[11px] font-semibold uppercase tracking-widest text-gray-500 border border-gray-200 rounded-full px-4 py-2 hover:border-gray-900 hover:text-gray-900 transition-all duration-200"
                   >
                     <svg className="w-3.5 h-3.5" viewBox="0 0 24 24" fill="currentColor"><path d="M22 7h-7V5h7v2zm1.726 10c-.442 1.297-2.029 3-5.101 3-3.074 0-5.051-1.598-5.051-5.355 0-3.590 1.925-5.744 5.051-5.744 3.074 0 4.814 1.867 5.101 4.996.047.437.069.885.069 1.353H15.5c.13 2.002 1.182 2.418 2.368 2.418 1.187 0 1.817-.694 2.063-1.667h3.795zm-7.44-3.667h3.569c-.051-1.453-.9-2.22-1.784-2.22-.929 0-1.645.748-1.785 2.22zM9.5 12.4c0 1.97-1.066 3.21-2.79 3.21-1.12 0-1.893-.453-2.21-1.193V15.5H1V5h3.5v3.827c.317-.693 1.007-1.127 2.21-1.127C8.434 7.7 9.5 8.957 9.5 12.4zm-3.414 0c0-1.518-.513-2.4-1.42-2.4-.907 0-1.416.882-1.416 2.4 0 1.516.51 2.4 1.416 2.4.907 0 1.42-.884 1.42-2.4z" /></svg>
-                    Behance Portfolio
+                    Behance
                   </a>
                 </div>
                 <div className="flex items-center gap-3">
@@ -780,18 +805,31 @@ export default function Home() {
                     </p>
                     <h2 className="text-4xl font-semibold leading-tight">Latest Blog Posts</h2>
                   </div>
-                  <p className="text-[13px] text-gray-500 max-w-md leading-relaxed">
-                    Thoughts on leadership, learning, and people strategy from real projects and community engagement.
-                  </p>
+                  <div className="flex flex-col gap-4">
+                    <p className="text-[13px] text-gray-500 max-w-md leading-relaxed">
+                      Thoughts on leadership, learning, and people strategy from real projects and community engagement.
+                    </p>
+                    <div className="flex items-center gap-4">
+                      <a href="https://www.linkedin.com/in/thawheed-de-alwis" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 text-[12px] font-semibold text-[#1a1a1a] hover:text-blue-600 transition-colors duration-200">
+                        <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" /></svg>
+                        LinkedIn
+                      </a>
+                      <span className="text-gray-200">·</span>
+                      <a href="https://www.behance.net/thouheeddealwis" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 text-[12px] font-semibold text-[#1a1a1a] hover:text-blue-500 transition-colors duration-200">
+                        <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M22 7h-7V5h7v2zm1.726 10c-.442 1.297-2.029 3-5.101 3-3.074 0-5.051-1.867-5.051-5.449 0-3.563 1.98-5.551 5.001-5.551 3.055 0 4.73 1.989 5.101 4.994.047.437.069.885.069 1.352H15.5c.13 2.002 1.182 2.418 2.368 2.418 1.187 0 1.817-.694 2.063-1.767h3.795zm-7.44-3.667h3.569c-.051-1.453-.9-2.22-1.784-2.22-.929 0-1.645.748-1.785 2.22zM9.5 12.4c0 1.97-1.066 3.21-2.79 3.21-1.12 0-1.893-.453-2.21-1.193V15.5H1V5h3.5v3.827c.317-.693 1.007-1.127 2.21-1.127C8.434 7.7 9.5 8.957 9.5 12.4zm-3.414 0c0-1.518-.513-2.4-1.42-2.4-.907 0-1.416.882-1.416 2.4 0 1.516.51 2.4 1.416 2.4.907 0 1.42-.884 1.42-2.4z" /></svg>
+                        Behance
+                      </a>
+                    </div>
+                  </div>
                 </div>
               </Reveal>
 
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
                 <Reveal delay={100}>
                   <article className="group bg-[#f8f9fa] border border-gray-100 rounded-3xl overflow-hidden hover:shadow-lg transition-all duration-300">
                     <a href="https://thawheed-de-alwis.blogspot.com/2025/08/hr-recruitment-topics-subcategories.html" target="_blank" rel="noopener noreferrer" className="block">
                       <div className="relative w-full aspect-[16/10] overflow-hidden">
-                        <Image src="/blog-1.jpg" alt="HR Recruitment Topics & Subcategories" fill sizes="(max-width: 768px) 100vw, 50vw" className="object-cover transition-transform duration-700 group-hover:scale-105" />
+                        <Image src="/blog-1.jpg" alt="HR Recruitment Topics & Subcategories" fill sizes="(max-width: 768px) 100vw, 33vw" className="object-cover transition-transform duration-700 group-hover:scale-105" />
                       </div>
                       <div className="p-6">
                         <p className="text-[10px] font-semibold uppercase tracking-widest text-gray-400 mb-3">August 01, 2025</p>
@@ -811,13 +849,33 @@ export default function Home() {
                   <article className="group bg-[#f8f9fa] border border-gray-100 rounded-3xl overflow-hidden hover:shadow-lg transition-all duration-300">
                     <a href="https://thawheed-de-alwis.blogspot.com/2026/04/creating-impact-beyond-classrooms.html" target="_blank" rel="noopener noreferrer" className="block">
                       <div className="relative w-full aspect-[16/10] overflow-hidden">
-                        <Image src="/blog-2.jpeg" alt="Creating Impact Beyond Classrooms: Exploring Local Careers & Role Models" fill sizes="(max-width: 768px) 100vw, 50vw" className="object-cover transition-transform duration-700 group-hover:scale-105" />
+                        <Image src="/blog-2.jpeg" alt="Creating Impact Beyond Classrooms: Exploring Local Careers & Role Models" fill sizes="(max-width: 768px) 100vw, 33vw" className="object-cover transition-transform duration-700 group-hover:scale-105" />
                       </div>
                       <div className="p-6">
                         <p className="text-[10px] font-semibold uppercase tracking-widest text-gray-400 mb-3">April 25, 2026</p>
                         <h3 className="text-2xl font-semibold leading-tight text-[#1a1a1a] mb-3">Creating Impact Beyond Classrooms</h3>
                         <p className="text-[13px] text-gray-600 leading-relaxed mb-5">
                           Reflections from a community workshop at Soysa College focused on local careers, role models, and practical pathways for students.
+                        </p>
+                        <span className="inline-flex items-center gap-2 text-[12px] font-semibold text-black border-b border-black pb-0.5">
+                          Read Article <ArrowUpRight className="w-3.5 h-3.5" />
+                        </span>
+                      </div>
+                    </a>
+                  </article>
+                </Reveal>
+
+                <Reveal delay={300}>
+                  <article className="group bg-[#f8f9fa] border border-gray-100 rounded-3xl overflow-hidden hover:shadow-lg transition-all duration-300">
+                    <a href="https://thawheed-de-alwis.blogspot.com/2026/04/creative-product-designing-where.html" target="_blank" rel="noopener noreferrer" className="block">
+                      <div className="relative w-full aspect-[16/10] overflow-hidden">
+                        <Image src="/blog-3.jpeg" alt="Creative Product Designing: Where Innovation Meets Purpose" fill sizes="(max-width: 768px) 100vw, 33vw" className="object-cover transition-transform duration-700 group-hover:scale-105" />
+                      </div>
+                      <div className="p-6">
+                        <p className="text-[10px] font-semibold uppercase tracking-widest text-gray-400 mb-3">April 29, 2026</p>
+                        <h3 className="text-2xl font-semibold leading-tight text-[#1a1a1a] mb-3">Creative Product Designing: Where Innovation Meets Purpose</h3>
+                        <p className="text-[13px] text-gray-600 leading-relaxed mb-5">
+                          How creativity, usability, and emotional connection converge to make products that stand out — from concept to user experience.
                         </p>
                         <span className="inline-flex items-center gap-2 text-[12px] font-semibold text-black border-b border-black pb-0.5">
                           Read Article <ArrowUpRight className="w-3.5 h-3.5" />
@@ -853,6 +911,17 @@ export default function Home() {
                 <a href="mailto:thouheedshereef@gmail.com"
                   className="flex items-center gap-2 px-8 py-3.5 border border-white/20 text-white rounded-full font-medium text-sm hover:border-white transition-all duration-200">
                   <Mail className="w-4 h-4" /> Send an Email
+                </a>
+              </div>
+              <div className="flex items-center gap-4 mt-6">
+                <a href="https://www.linkedin.com/in/thawheed-de-alwis" target="_blank" rel="noopener noreferrer"
+                  className="flex items-center gap-2 text-[12px] font-semibold text-gray-400 hover:text-white transition-colors duration-200">
+                  <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" /></svg> LinkedIn
+                </a>
+                <span className="text-white/10">·</span>
+                <a href="https://www.behance.net/thouheeddealwis" target="_blank" rel="noopener noreferrer"
+                  className="flex items-center gap-2 text-[12px] font-semibold text-gray-400 hover:text-white transition-colors duration-200">
+                  <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M22 7h-7V5h7v2zm1.726 10c-.442 1.297-2.029 3-5.101 3-3.074 0-5.051-1.598-5.051-5.355 0-3.590 1.925-5.744 5.051-5.744 3.074 0 4.814 1.867 5.101 4.996.047.437.069.885.069 1.353H15.5c.13 2.002 1.182 2.418 2.368 2.418 1.187 0 1.817-.694 2.063-1.667h3.795zm-7.44-3.667h3.569c-.051-1.453-.9-2.22-1.784-2.22-.929 0-1.645.748-1.785 2.22zM9.5 12.4c0 1.97-1.066 3.21-2.79 3.21-1.12 0-1.893-.453-2.21-1.193V15.5H1V5h3.5v3.827c.317-.693 1.007-1.127 2.21-1.127C8.434 7.7 9.5 8.957 9.5 12.4zm-3.414 0c0-1.518-.513-2.4-1.42-2.4-.907 0-1.416.882-1.416 2.4 0 1.516.51 2.4 1.416 2.4.907 0 1.42-.884 1.42-2.4z" /></svg> Behance
                 </a>
               </div>
             </Reveal>
